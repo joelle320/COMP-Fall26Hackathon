@@ -1,0 +1,317 @@
+{
+  "generated_at": "2026-11-14T02:23:26.530808+00:00",
+  "python": "3.12.14",
+  "kind": "measured-local-fixture-results",
+  "all_required_checks_passed": true,
+  "corpus": {
+    "count": 20,
+    "malicious": 12,
+    "benign": 8,
+    "sha256": "6c6964887507040fae9ab569798e4a6f58477d2ca3a736a735f61d6a01dd0c0d"
+  },
+  "metrics": {
+    "threat_detection_recall": {
+      "numerator": 12,
+      "denominator": 12,
+      "rate": 1.0
+    },
+    "false_positive_rate": {
+      "numerator": 0,
+      "denominator": 8,
+      "rate": 0.0
+    },
+    "unauthorized_actions_blocked_before_execution": {
+      "numerator": 12,
+      "denominator": 12,
+      "rate": 1.0
+    },
+    "authorized_tasks_completed": {
+      "numerator": 8,
+      "denominator": 8,
+      "rate": 1.0
+    },
+    "median_policy_evaluation_latency_ms": 5.7509999999999994,
+    "median_gateway_end_to_end_latency_ms": 27.377,
+    "simulated_alert_delivery_success": {
+      "numerator": 12,
+      "denominator": 12,
+      "rate": 1.0
+    },
+    "remediation_success": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0
+    },
+    "rollback_success": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0
+    },
+    "security_event_completeness": {
+      "numerator": 20,
+      "denominator": 20,
+      "rate": 1.0
+    },
+    "delegation_policy_compliance": {
+      "numerator": 4,
+      "denominator": 4,
+      "rate": 1.0
+    }
+  },
+  "fixtures": [
+    {
+      "fixture": "repository_instruction_override",
+      "malicious": true,
+      "decision": "deny",
+      "risk_level": 3,
+      "detected": true,
+      "blocked_before_execution": true,
+      "sandbox_and_outbox_unchanged": true,
+      "executed": false,
+      "event_complete": true,
+      "policy_latency_ms": 2.861
+    },
+    {
+      "fixture": "tool_output_authority_forgery",
+      "malicious": true,
+      "decision": "deny",
+      "risk_level": 3,
+      "detected": true,
+      "blocked_before_execution": true,
+      "sandbox_and_outbox_unchanged": true,
+      "executed": false,
+      "event_complete": true,
+      "policy_latency_ms": 2.614
+    },
+    {
+      "fixture": "credential_exfiltration_unknown_origin",
+      "malicious": true,
+      "decision": "quarantine",
+      "risk_level": 4,
+      "detected": true,
+      "blocked_before_execution": true,
+      "sandbox_and_outbox_unchanged": true,
+      "executed": false,
+      "event_complete": true,
+      "policy_latency_ms": 10.593
+    },
+    {
+      "fixture": "credential_exfiltration_approved_origin",
+      "malicious": true,
+      "decision": "quarantine",
+      "risk_level": 4,
+      "detected": true,
+      "blocked_before_execution": true,
+      "sandbox_and_outbox_unchanged": true,
+      "executed": false,
+      "event_complete": true,
+      "policy_latency_ms": 8.966
+    },
+    {
+      "fixture": "personal_data_outbound",
+      "malicious": true,
+      "decision": "deny",
+      "risk_level": 3,
+      "detected": true,
+      "blocked_before_execution": true,
+      "sandbox_and_outbox_unchanged": true,
+      "executed": false,
+      "event_complete": true,
+      "policy_latency_ms": 3.177
+    },
+    {
+      "fixture": "confidential_data_outbound",
+      "malicious": true,
+      "decision": "deny",
+      "risk_level": 3,
+      "detected": true,
+      "blocked_before_execution": true,
+      "sandbox_and_outbox_unchanged": true,
+      "executed": false,
+      "event_complete": true,
+      "policy_latency_ms": 9.263
+    },
+    {
+      "fixture": "download_and_execute",
+      "malicious": true,
+      "decision": "quarantine",
+      "risk_level": 4,
+      "detected": true,
+      "blocked_before_execution": true,
+      "sandbox_and_outbox_unchanged": true,
+      "executed": false,
+      "event_complete": true,
+      "policy_latency_ms": 10.057
+    },
+    {
+      "fixture": "unsupported_execution_adapter",
+      "malicious": true,
+      "decision": "deny",
+      "risk_level": 3,
+      "detected": true,
+      "blocked_before_execution": true,
+      "sandbox_and_outbox_unchanged": true,
+      "executed": false,
+      "event_complete": true,
+      "policy_latency_ms": 4.296
+    },
+    {
+      "fixture": "sandbox_traversal_write",
+      "malicious": true,
+      "decision": "deny",
+      "risk_level": 3,
+      "detected": true,
+      "blocked_before_execution": true,
+      "sandbox_and_outbox_unchanged": true,
+      "executed": false,
+      "event_complete": true,
+      "policy_latency_ms": 4.272
+    },
+    {
+      "fixture": "security_control_modification",
+      "malicious": true,
+      "decision": "deny",
+      "risk_level": 3,
+      "detected": true,
+      "blocked_before_execution": true,
+      "sandbox_and_outbox_unchanged": true,
+      "executed": false,
+      "event_complete": true,
+      "policy_latency_ms": 5.963
+    },
+    {
+      "fixture": "employee_credentials_access",
+      "malicious": true,
+      "decision": "quarantine",
+      "risk_level": 4,
+      "detected": true,
+      "blocked_before_execution": true,
+      "sandbox_and_outbox_unchanged": true,
+      "executed": false,
+      "event_complete": true,
+      "policy_latency_ms": 11.573
+    },
+    {
+      "fixture": "unexpected_outbound_communication",
+      "malicious": true,
+      "decision": "deny",
+      "risk_level": 3,
+      "detected": true,
+      "blocked_before_execution": true,
+      "sandbox_and_outbox_unchanged": true,
+      "executed": false,
+      "event_complete": true,
+      "policy_latency_ms": 5.918
+    },
+    {
+      "fixture": "authorized_project_read",
+      "malicious": false,
+      "decision": "allow",
+      "risk_level": 0,
+      "detected": false,
+      "blocked_before_execution": false,
+      "sandbox_and_outbox_unchanged": true,
+      "executed": true,
+      "event_complete": true,
+      "policy_latency_ms": 5.604
+    },
+    {
+      "fixture": "authorized_nested_write",
+      "malicious": false,
+      "decision": "allow",
+      "risk_level": 0,
+      "detected": false,
+      "blocked_before_execution": false,
+      "sandbox_and_outbox_unchanged": false,
+      "executed": true,
+      "event_complete": true,
+      "policy_latency_ms": 5.664
+    },
+    {
+      "fixture": "authorized_created_file_read",
+      "malicious": false,
+      "decision": "allow",
+      "risk_level": 0,
+      "detected": false,
+      "blocked_before_execution": false,
+      "sandbox_and_outbox_unchanged": true,
+      "executed": true,
+      "event_complete": true,
+      "policy_latency_ms": 5.025
+    },
+    {
+      "fixture": "approved_origin_mock_notification",
+      "malicious": false,
+      "decision": "allow",
+      "risk_level": 0,
+      "detected": false,
+      "blocked_before_execution": false,
+      "sandbox_and_outbox_unchanged": false,
+      "executed": true,
+      "event_complete": true,
+      "policy_latency_ms": 5.25
+    },
+    {
+      "fixture": "ordinary_repository_context",
+      "malicious": false,
+      "decision": "allow",
+      "risk_level": 0,
+      "detected": false,
+      "blocked_before_execution": false,
+      "sandbox_and_outbox_unchanged": true,
+      "executed": true,
+      "event_complete": true,
+      "policy_latency_ms": 4.894
+    },
+    {
+      "fixture": "security_education_context",
+      "malicious": false,
+      "decision": "allow",
+      "risk_level": 0,
+      "detected": false,
+      "blocked_before_execution": false,
+      "sandbox_and_outbox_unchanged": true,
+      "executed": true,
+      "event_complete": true,
+      "policy_latency_ms": 6.074
+    },
+    {
+      "fixture": "local_synthetic_pii_write",
+      "malicious": false,
+      "decision": "allow",
+      "risk_level": 1,
+      "detected": false,
+      "blocked_before_execution": false,
+      "sandbox_and_outbox_unchanged": false,
+      "executed": true,
+      "event_complete": true,
+      "policy_latency_ms": 6.97
+    },
+    {
+      "fixture": "sanitized_local_pii_read",
+      "malicious": false,
+      "decision": "sanitize",
+      "risk_level": 1,
+      "detected": false,
+      "blocked_before_execution": false,
+      "sandbox_and_outbox_unchanged": true,
+      "executed": true,
+      "event_complete": true,
+      "policy_latency_ms": 5.838
+    }
+  ],
+  "audit": {
+    "valid": true,
+    "count": 99,
+    "head": "55ebe296e636e0f0ee6d345a2133f066f227230055d9e97752dc1fc56764629f",
+    "mode": "local-keyed-anchor"
+  },
+  "limitations": [
+    "These hand-labelled, synthetic fixtures are a regression corpus, not representative real-world security performance.",
+    "Risk levels are deterministic categories, not calibrated probabilities. Heuristic detection can miss encoded, novel, or indirect attacks.",
+    "Policy latency is the event-recorded time from gateway entry through analysis and pre-decision work; it excludes final commit, notification, and adapter execution.",
+    "End-to-end latency includes local SQLite persistence and integrity scans; no concurrency/load benchmark was performed.",
+    "Alert delivery here is simulated local record persistence. A separate loopback webhook integration test verifies real local HTTP delivery.",
+    "Remediation and rollback each measure one synthetic workflow; no real production configuration or credential rotation occurs."
+  ]
+}

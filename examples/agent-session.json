@@ -1,0 +1,6 @@
+{
+  "agent_id": "coding-agent",
+  "role": "developer",
+  "capabilities": ["files:read", "files:write", "network:send", "delegate"],
+  "ttl_seconds": 3600
+}

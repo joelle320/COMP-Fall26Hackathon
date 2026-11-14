@@ -1,0 +1,5 @@
+{
+  "tool": "files",
+  "operation": "read",
+  "resource": "readme.txt"
+}

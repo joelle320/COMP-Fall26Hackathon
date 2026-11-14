@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "sentinel": {
+      "command": "/ABSOLUTE/PATH/TO/sentinel/.venv/bin/python",
+      "args": ["-m", "sentinel.mcp_server"],
+      "env": {
+        "SENTINEL_URL": "http://127.0.0.1:8000",
+        "SENTINEL_AGENT_TOKEN": "REPLACE_WITH_SCOPED_AGENT_TOKEN_NOT_AUTHORITY_TOKEN"
+      }
+    }
+  }
+}

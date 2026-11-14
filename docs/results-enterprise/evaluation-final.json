@@ -1,0 +1,656 @@
+{
+  "generated_at": "2026-11-14T14:26:10.125042+00:00",
+  "kind": "measured-synthetic-enterprise-suite",
+  "all_required_checks_passed": true,
+  "agentguard": {
+    "generated_at": "2026-11-14T14:26:06.158256+00:00",
+    "python": "3.12.14",
+    "kind": "measured-local-fixture-results",
+    "all_required_checks_passed": true,
+    "corpus": {
+      "count": 20,
+      "malicious": 12,
+      "benign": 8,
+      "sha256": "6c6964887507040fae9ab569798e4a6f58477d2ca3a736a735f61d6a01dd0c0d"
+    },
+    "metrics": {
+      "threat_detection_recall": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      },
+      "false_positive_rate": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "unauthorized_actions_blocked_before_execution": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      },
+      "authorized_tasks_completed": {
+        "numerator": 8,
+        "denominator": 8,
+        "rate": 1.0
+      },
+      "median_policy_evaluation_latency_ms": 4.5344999999999995,
+      "median_gateway_end_to_end_latency_ms": 24.084,
+      "simulated_alert_delivery_success": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      },
+      "remediation_success": {
+        "numerator": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "rollback_success": {
+        "numerator": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "security_event_completeness": {
+        "numerator": 20,
+        "denominator": 20,
+        "rate": 1.0
+      },
+      "delegation_policy_compliance": {
+        "numerator": 4,
+        "denominator": 4,
+        "rate": 1.0
+      }
+    },
+    "fixtures": [
+      {
+        "fixture": "repository_instruction_override",
+        "malicious": true,
+        "decision": "deny",
+        "risk_level": 3,
+        "detected": true,
+        "blocked_before_execution": true,
+        "sandbox_and_outbox_unchanged": true,
+        "executed": false,
+        "event_complete": true,
+        "policy_latency_ms": 2.696
+      },
+      {
+        "fixture": "tool_output_authority_forgery",
+        "malicious": true,
+        "decision": "deny",
+        "risk_level": 3,
+        "detected": true,
+        "blocked_before_execution": true,
+        "sandbox_and_outbox_unchanged": true,
+        "executed": false,
+        "event_complete": true,
+        "policy_latency_ms": 1.941
+      },
+      {
+        "fixture": "credential_exfiltration_unknown_origin",
+        "malicious": true,
+        "decision": "quarantine",
+        "risk_level": 4,
+        "detected": true,
+        "blocked_before_execution": true,
+        "sandbox_and_outbox_unchanged": true,
+        "executed": false,
+        "event_complete": true,
+        "policy_latency_ms": 8.884
+      },
+      {
+        "fixture": "credential_exfiltration_approved_origin",
+        "malicious": true,
+        "decision": "quarantine",
+        "risk_level": 4,
+        "detected": true,
+        "blocked_before_execution": true,
+        "sandbox_and_outbox_unchanged": true,
+        "executed": false,
+        "event_complete": true,
+        "policy_latency_ms": 8.992
+      },
+      {
+        "fixture": "personal_data_outbound",
+        "malicious": true,
+        "decision": "deny",
+        "risk_level": 3,
+        "detected": true,
+        "blocked_before_execution": true,
+        "sandbox_and_outbox_unchanged": true,
+        "executed": false,
+        "event_complete": true,
+        "policy_latency_ms": 3.297
+      },
+      {
+        "fixture": "confidential_data_outbound",
+        "malicious": true,
+        "decision": "deny",
+        "risk_level": 3,
+        "detected": true,
+        "blocked_before_execution": true,
+        "sandbox_and_outbox_unchanged": true,
+        "executed": false,
+        "event_complete": true,
+        "policy_latency_ms": 2.728
+      },
+      {
+        "fixture": "download_and_execute",
+        "malicious": true,
+        "decision": "quarantine",
+        "risk_level": 4,
+        "detected": true,
+        "blocked_before_execution": true,
+        "sandbox_and_outbox_unchanged": true,
+        "executed": false,
+        "event_complete": true,
+        "policy_latency_ms": 13.271
+      },
+      {
+        "fixture": "unsupported_execution_adapter",
+        "malicious": true,
+        "decision": "deny",
+        "risk_level": 3,
+        "detected": true,
+        "blocked_before_execution": true,
+        "sandbox_and_outbox_unchanged": true,
+        "executed": false,
+        "event_complete": true,
+        "policy_latency_ms": 3.398
+      },
+      {
+        "fixture": "sandbox_traversal_write",
+        "malicious": true,
+        "decision": "deny",
+        "risk_level": 3,
+        "detected": true,
+        "blocked_before_execution": true,
+        "sandbox_and_outbox_unchanged": true,
+        "executed": false,
+        "event_complete": true,
+        "policy_latency_ms": 3.405
+      },
+      {
+        "fixture": "security_control_modification",
+        "malicious": true,
+        "decision": "deny",
+        "risk_level": 3,
+        "detected": true,
+        "blocked_before_execution": true,
+        "sandbox_and_outbox_unchanged": true,
+        "executed": false,
+        "event_complete": true,
+        "policy_latency_ms": 4.381
+      },
+      {
+        "fixture": "employee_credentials_access",
+        "malicious": true,
+        "decision": "quarantine",
+        "risk_level": 4,
+        "detected": true,
+        "blocked_before_execution": true,
+        "sandbox_and_outbox_unchanged": true,
+        "executed": false,
+        "event_complete": true,
+        "policy_latency_ms": 10.326
+      },
+      {
+        "fixture": "unexpected_outbound_communication",
+        "malicious": true,
+        "decision": "deny",
+        "risk_level": 3,
+        "detected": true,
+        "blocked_before_execution": true,
+        "sandbox_and_outbox_unchanged": true,
+        "executed": false,
+        "event_complete": true,
+        "policy_latency_ms": 4.987
+      },
+      {
+        "fixture": "authorized_project_read",
+        "malicious": false,
+        "decision": "allow",
+        "risk_level": 0,
+        "detected": false,
+        "blocked_before_execution": false,
+        "sandbox_and_outbox_unchanged": true,
+        "executed": true,
+        "event_complete": true,
+        "policy_latency_ms": 5.377
+      },
+      {
+        "fixture": "authorized_nested_write",
+        "malicious": false,
+        "decision": "allow",
+        "risk_level": 0,
+        "detected": false,
+        "blocked_before_execution": false,
+        "sandbox_and_outbox_unchanged": false,
+        "executed": true,
+        "event_complete": true,
+        "policy_latency_ms": 4.455
+      },
+      {
+        "fixture": "authorized_created_file_read",
+        "malicious": false,
+        "decision": "allow",
+        "risk_level": 0,
+        "detected": false,
+        "blocked_before_execution": false,
+        "sandbox_and_outbox_unchanged": true,
+        "executed": true,
+        "event_complete": true,
+        "policy_latency_ms": 4.575
+      },
+      {
+        "fixture": "approved_origin_mock_notification",
+        "malicious": false,
+        "decision": "allow",
+        "risk_level": 0,
+        "detected": false,
+        "blocked_before_execution": false,
+        "sandbox_and_outbox_unchanged": false,
+        "executed": true,
+        "event_complete": true,
+        "policy_latency_ms": 4.263
+      },
+      {
+        "fixture": "ordinary_repository_context",
+        "malicious": false,
+        "decision": "allow",
+        "risk_level": 0,
+        "detected": false,
+        "blocked_before_execution": false,
+        "sandbox_and_outbox_unchanged": true,
+        "executed": true,
+        "event_complete": true,
+        "policy_latency_ms": 4.58
+      },
+      {
+        "fixture": "security_education_context",
+        "malicious": false,
+        "decision": "allow",
+        "risk_level": 0,
+        "detected": false,
+        "blocked_before_execution": false,
+        "sandbox_and_outbox_unchanged": true,
+        "executed": true,
+        "event_complete": true,
+        "policy_latency_ms": 5.369
+      },
+      {
+        "fixture": "local_synthetic_pii_write",
+        "malicious": false,
+        "decision": "allow",
+        "risk_level": 1,
+        "detected": false,
+        "blocked_before_execution": false,
+        "sandbox_and_outbox_unchanged": false,
+        "executed": true,
+        "event_complete": true,
+        "policy_latency_ms": 4.494
+      },
+      {
+        "fixture": "sanitized_local_pii_read",
+        "malicious": false,
+        "decision": "sanitize",
+        "risk_level": 1,
+        "detected": false,
+        "blocked_before_execution": false,
+        "sandbox_and_outbox_unchanged": true,
+        "executed": true,
+        "event_complete": true,
+        "policy_latency_ms": 4.932
+      }
+    ],
+    "audit": {
+      "valid": true,
+      "count": 99,
+      "head": "0d427f99bdf994b4370badc306212b7aafe391b271138c9e09442ea1871d586e",
+      "mode": "local-keyed-anchor"
+    },
+    "limitations": [
+      "These hand-labelled, synthetic fixtures are a regression corpus, not representative real-world security performance.",
+      "Risk levels are deterministic categories, not calibrated probabilities. Heuristic detection can miss encoded, novel, or indirect attacks.",
+      "Policy latency is the event-recorded time from gateway entry through analysis and pre-decision work; it excludes final commit, notification, and adapter execution.",
+      "End-to-end latency includes local SQLite persistence and integrity scans; no concurrency/load benchmark was performed.",
+      "Alert delivery here is simulated local record persistence. A separate loopback webhook integration test verifies real local HTTP delivery.",
+      "Remediation and rollback each measure one synthetic workflow; no real production configuration or credential rotation occurs."
+    ]
+  },
+  "accountwatch": {
+    "generated_at": "2026-11-14T14:26:08.216445+00:00",
+    "kind": "measured-held-out-synthetic-accountwatch",
+    "dataset": {
+      "employees": 20,
+      "services": 3,
+      "normal_training_samples": 690,
+      "held_out_cases": 16,
+      "normal_cases": 8,
+      "anomalous_cases": 8,
+      "split": {
+        "training": "normal-only history; 30 rows per identity; ends at least two days before held-out activity",
+        "evaluation": "separate labelled cases; not fitted or automatically learned",
+        "training_count": 690,
+        "evaluation_case_count": 16
+      }
+    },
+    "confusion_matrix": {
+      "true_positive": 8,
+      "false_positive": 0,
+      "true_negative": 8,
+      "false_negative": 0
+    },
+    "metrics": {
+      "precision": {
+        "numerator": 8,
+        "denominator": 8,
+        "rate": 1.0
+      },
+      "recall": {
+        "numerator": 8,
+        "denominator": 8,
+        "rate": 1.0
+      },
+      "false_positive_rate": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "benign_exceptions_identified": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "analyst_review_completion": {
+        "numerator": 11,
+        "denominator": 11,
+        "rate": 1.0
+      },
+      "median_detection_latency_ms": 44.954,
+      "median_event_to_alert_ms": 20.769,
+      "unnecessary_review_interruptions": 0,
+      "baseline_unchanged_after_evaluation": true
+    },
+    "cases": [
+      {
+        "id": "normal-login",
+        "ground_truth": "normal",
+        "scenario": "routine_login",
+        "detected_for_review": false,
+        "max_risk_score": 0,
+        "reason_codes": [],
+        "reviewed_alerts": 0,
+        "passed": true
+      },
+      {
+        "id": "normal-files",
+        "ground_truth": "normal",
+        "scenario": "routine_files",
+        "detected_for_review": false,
+        "max_risk_score": 0,
+        "reason_codes": [],
+        "reviewed_alerts": 0,
+        "passed": true
+      },
+      {
+        "id": "approved-after-hours",
+        "ground_truth": "normal",
+        "scenario": "benign_after_hours",
+        "detected_for_review": false,
+        "max_risk_score": 0,
+        "reason_codes": [
+          "APPROVED_AFTER_HOURS"
+        ],
+        "reviewed_alerts": 0,
+        "passed": true
+      },
+      {
+        "id": "approved-travel",
+        "ground_truth": "normal",
+        "scenario": "benign_travel",
+        "detected_for_review": false,
+        "max_risk_score": 0,
+        "reason_codes": [
+          "APPROVED_TRAVEL"
+        ],
+        "reviewed_alerts": 0,
+        "passed": true
+      },
+      {
+        "id": "service-schedule",
+        "ground_truth": "normal",
+        "scenario": "normal_service_account",
+        "detected_for_review": false,
+        "max_risk_score": 0,
+        "reason_codes": [],
+        "reviewed_alerts": 0,
+        "passed": true
+      },
+      {
+        "id": "normal-sensitive-role",
+        "ground_truth": "normal",
+        "scenario": "authorized_sensitive_access",
+        "detected_for_review": false,
+        "max_risk_score": 0,
+        "reason_codes": [],
+        "reviewed_alerts": 0,
+        "passed": true
+      },
+      {
+        "id": "normal-long-session",
+        "ground_truth": "normal",
+        "scenario": "normal_session_duration",
+        "detected_for_review": false,
+        "max_risk_score": 0,
+        "reason_codes": [],
+        "reviewed_alerts": 0,
+        "passed": true
+      },
+      {
+        "id": "normal-low-failure",
+        "ground_truth": "normal",
+        "scenario": "single_failed_attempt",
+        "detected_for_review": false,
+        "max_risk_score": 0,
+        "reason_codes": [],
+        "reviewed_alerts": 0,
+        "passed": true
+      },
+      {
+        "id": "new-device-privilege",
+        "ground_truth": "anomalous",
+        "scenario": "new_device_privilege_sequence",
+        "detected_for_review": true,
+        "max_risk_score": 100,
+        "reason_codes": [
+          "NEW_DEVICE_PRIVILEGE_SEQUENCE",
+          "PRIVILEGE_POLICY_VIOLATION",
+          "UNFAMILIAR_DEVICE"
+        ],
+        "reviewed_alerts": 1,
+        "passed": true
+      },
+      {
+        "id": "failed-success-sensitive",
+        "ground_truth": "anomalous",
+        "scenario": "possible_account_takeover",
+        "detected_for_review": true,
+        "max_risk_score": 100,
+        "reason_codes": [
+          "DATA_ACCESS_VOLUME",
+          "FAILURES_THEN_SUCCESS",
+          "PERSONAL_FILE_VOLUME",
+          "POSSIBLE_TAKEOVER_SEQUENCE",
+          "SENSITIVE_ACCESS_BURST",
+          "UNFAMILIAR_DEVICE"
+        ],
+        "reviewed_alerts": 2,
+        "passed": true
+      },
+      {
+        "id": "abnormal-file-volume",
+        "ground_truth": "anomalous",
+        "scenario": "sensitive_access_volume",
+        "detected_for_review": true,
+        "max_risk_score": 70,
+        "reason_codes": [
+          "DATA_ACCESS_VOLUME",
+          "PERSONAL_FILE_VOLUME",
+          "SENSITIVE_ACCESS_BURST"
+        ],
+        "reviewed_alerts": 1,
+        "passed": true
+      },
+      {
+        "id": "external-transfer",
+        "ground_truth": "anomalous",
+        "scenario": "unapproved_destination",
+        "detected_for_review": true,
+        "max_risk_score": 100,
+        "reason_codes": [
+          "DATA_ACCESS_VOLUME",
+          "ROLE_RESOURCE_SCOPE",
+          "SENSITIVE_TRANSFER_CONTEXT",
+          "UNAPPROVED_TRANSFER_DESTINATION"
+        ],
+        "reviewed_alerts": 1,
+        "passed": true
+      },
+      {
+        "id": "unapproved-privilege",
+        "ground_truth": "anomalous",
+        "scenario": "privilege_policy_violation",
+        "detected_for_review": true,
+        "max_risk_score": 90,
+        "reason_codes": [
+          "PRIVILEGE_POLICY_VIOLATION"
+        ],
+        "reviewed_alerts": 1,
+        "passed": true
+      },
+      {
+        "id": "sensitive-file-burst",
+        "ground_truth": "anomalous",
+        "scenario": "sensitive_file_frequency",
+        "detected_for_review": true,
+        "max_risk_score": 55,
+        "reason_codes": [
+          "PERSONAL_FILE_VOLUME",
+          "SENSITIVE_ACCESS_BURST"
+        ],
+        "reviewed_alerts": 1,
+        "passed": true
+      },
+      {
+        "id": "admin-sequence",
+        "ground_truth": "anomalous",
+        "scenario": "unusual_admin_sequence",
+        "detected_for_review": true,
+        "max_risk_score": 100,
+        "reason_codes": [
+          "NEW_DEVICE_PRIVILEGE_SEQUENCE",
+          "PRIVILEGE_POLICY_VIOLATION",
+          "UNFAMILIAR_DEVICE"
+        ],
+        "reviewed_alerts": 2,
+        "passed": true
+      },
+      {
+        "id": "corroborated-after-hours",
+        "ground_truth": "anomalous",
+        "scenario": "unusual_login_context",
+        "detected_for_review": true,
+        "max_risk_score": 85,
+        "reason_codes": [
+          "FAILURES_THEN_SUCCESS",
+          "REPEATED_AUTH_FAILURES",
+          "UNFAMILIAR_DEVICE",
+          "UNUSUAL_COARSE_REGION",
+          "UNUSUAL_LOGIN_HOUR"
+        ],
+        "reviewed_alerts": 2,
+        "passed": true
+      }
+    ],
+    "audit_valid": true,
+    "all_required_checks_passed": true,
+    "limitations": [
+      "Small hand-labelled synthetic regression corpus, not real-world detection performance.",
+      "A review-priority score is not a compromise probability or a disciplinary recommendation.",
+      "Detection timing measures local ingest including persistence, on one host without load testing.",
+      "Event-to-alert time uses receipt-to-persisted-local-investigation timing, not historical event occurrence or corporate delivery.",
+      "Cross-module correlation accuracy and authorized agent completion are evaluated separately by enterprise tests/demo."
+    ]
+  },
+  "combined": {
+    "kind": "measured-synthetic-combined-evaluation",
+    "generated_at": "2026-11-14T14:26:10.117813+00:00",
+    "all_required_checks_passed": true,
+    "metrics": {
+      "cross_module_correlation_accuracy": {
+        "numerator": 4,
+        "denominator": 4,
+        "rate": 1.0
+      },
+      "analyst_review_completion": {
+        "numerator": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "authorized_workflow_completion": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "unnecessary_user_interruptions": 0,
+      "median_event_receipt_to_alert_ms": 17.443,
+      "event_to_alert_sample_count": 3,
+      "combined_workflow_seconds": 1.88
+    },
+    "correlation_cases": [
+      {
+        "name": "explicit_owner_and_authentication_session",
+        "event_id": "c19d97cc-d549-4928-8e44-bd75fdfa0ffb",
+        "expected_link": true,
+        "observed_link": true,
+        "correct": true
+      },
+      {
+        "name": "same_identity_different_authentication_session",
+        "event_id": "28c01998-d4d3-4519-adc0-cbfdbbf5e72e",
+        "expected_link": false,
+        "observed_link": false,
+        "correct": true
+      },
+      {
+        "name": "different_identity_concurrent_activity",
+        "event_id": "7683f97f-1339-4c8a-95cc-6612a5eac728",
+        "expected_link": false,
+        "observed_link": false,
+        "correct": true
+      },
+      {
+        "name": "second_explicitly_bound_agent",
+        "event_id": "7c0deb39-1330-4c57-9571-769cdbdcf841",
+        "expected_link": true,
+        "observed_link": true,
+        "correct": true
+      }
+    ],
+    "workflow_complete": true,
+    "audit_valid": true,
+    "limitations": [
+      "Four hand-labelled explicit relationship checks, not an attribution or population benchmark.",
+      "Authorized completion and interruption counts cover the normal and reviewed-recovery gateway reads only.",
+      "Event-to-alert time is server telemetry receipt to persisted anomaly creation time, not the synthetic historical event timestamp.",
+      "All repairs, step-up verification, connectors and identity observations are synthetic local demonstrations."
+    ]
+  },
+  "limitations": [
+    "All results apply only to these small labelled synthetic fixture sets on this host.",
+    "Behavioral priorities and explicit correlations are not probabilities or proof of compromise.",
+    "Cisco adapters and operational responses are local simulations; there is no live corporate integration."
+  ]
+}

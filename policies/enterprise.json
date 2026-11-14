@@ -1,0 +1,118 @@
+{
+  "id": "sentinel-local-v1",
+  "version": 1,
+  "description": "Deterministic local hackathon policy. Approved outbound requests are persisted to a mock sink only.",
+  "destinations": [
+    "https://api.internal.example",
+    "https://siem.internal.example"
+  ],
+  "destination_allowlist": [
+    "https://api.internal.example",
+    "https://siem.internal.example"
+  ],
+  "default_capabilities": [
+    "files:read",
+    "files:write",
+    "network:send",
+    "delegate"
+  ],
+  "allowed_capabilities": [
+    "files:read",
+    "files:write",
+    "network:send",
+    "delegate",
+    "tickets:read"
+  ],
+  "critical_resources": [
+    "config/agent.json"
+  ],
+  "protected_resources": [
+    ".env",
+    ".ssh",
+    ".aws",
+    ".git",
+    "credentials",
+    "secrets",
+    "passwords"
+  ],
+  "limits": {
+    "max_action_bytes": 65536,
+    "max_file_bytes": 65536,
+    "max_session_ttl_seconds": 3600,
+    "approval_ttl_seconds": 300,
+    "max_delegation_depth": 8
+  },
+  "classifications": {
+    "secret_patterns": [],
+    "pii_patterns": [],
+    "confidential_patterns": [
+      "\\bconfidential\\b",
+      "\\bINTERNAL[- ]ONLY\\b",
+      "\\btrade[- ]secret\\b"
+    ]
+  },
+  "mandatory_controls": [
+    "No arbitrary command execution",
+    "No outbound credentials, personal information, or confidential data",
+    "No access outside the project sandbox",
+    "No delegation beyond the parent's live scope",
+    "No high-impact remediation without separate authority approval",
+    "No tool side effects before a committed policy decision",
+    "Fail closed when audit integrity cannot be verified"
+  ],
+  "risk_model": {
+    "0": "Informational: allow",
+    "1": "Low: allow with monitoring or sanitization",
+    "2": "Moderate: pause for exact, expiring human approval",
+    "3": "High: deny and alert",
+    "4": "Critical: quarantine affected session and alert"
+  },
+  "accountwatch": {
+    "thresholds": [
+      {
+        "label": "informational",
+        "min": 0,
+        "max": 24
+      },
+      {
+        "label": "low",
+        "min": 25,
+        "max": 49
+      },
+      {
+        "label": "moderate",
+        "min": 50,
+        "max": 69
+      },
+      {
+        "label": "high",
+        "min": 70,
+        "max": 89
+      },
+      {
+        "label": "critical",
+        "min": 90,
+        "max": 100
+      }
+    ],
+    "retention_days": 30,
+    "baseline_retention_days": 90,
+    "min_samples": 10,
+    "correlation_window_minutes": 30,
+    "step_up_score": 70,
+    "review_score": 50,
+    "verification_minutes": 15,
+    "auth_frequency_ceiling": 5,
+    "privileged_roles": [
+      "security",
+      "operations"
+    ],
+    "destination_allowlist": [
+      "https://api.internal.example",
+      "https://siem.internal.example"
+    ],
+    "purpose": "Synthetic security anomaly investigation; never productivity or disciplinary monitoring",
+    "tenant_id": "sentinel-demo",
+    "automatic_account_disable": false
+  }
+}
